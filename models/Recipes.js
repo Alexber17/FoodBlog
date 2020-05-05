@@ -8,7 +8,8 @@ const recipeSchema = new Schema({
     directions: { type: String, required: true },
     img:{type: String},
     video:{type: String},
-    Likes:{ type: Number}
+    Likes:{ type: Number},
+   
 
 }, { timestamps: true });
 

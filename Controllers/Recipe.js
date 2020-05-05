@@ -15,8 +15,6 @@ router.get('/', (req, res) => {
             recipes: allRecipes
         })
     });
-    
-    
 
 });
 // New
@@ -31,6 +29,14 @@ router.post('/', (req, res) => {
     Recipe.create(req.body, (error, addRecipe) => {
         console.log(addRecipe)
         // Once created - respond to client
+        res.redirect('/FBlog');
+    });
+});
+
+// Delete
+router.delete('/:id', (req, res) => {
+    // Delete document from collection
+    Recipe.findByIdAndRemove(req.params.id, (err, recipe) => {
         res.redirect('/FBlog');
     });
 });

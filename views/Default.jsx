@@ -1,5 +1,7 @@
 const React = require('react');
 
+
+
 class Default extends React.Component{
     render(){
         return(
@@ -29,7 +31,7 @@ class Default extends React.Component{
                         <div class="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul class="navbar-nav mr-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/FBlog">Home <span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/FBlog/new">Add New Recipe</a>
@@ -39,8 +41,12 @@ class Default extends React.Component{
                             
                         </div>
                         </nav>
-                        {this.props.children}                                
-                                            
+
+                   
+
+
+                            {this.props.children}                                
+             
                     </body>
                 </html>
         )
