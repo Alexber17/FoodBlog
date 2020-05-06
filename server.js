@@ -10,6 +10,7 @@ app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'jsx');
 app.engine('jsx', require('express-react-views').createEngine());
 app.use(methodOverride('_method'));
+app.use(express.static(__dirname + '/public'));
 
 // mongoose connection
 mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true });

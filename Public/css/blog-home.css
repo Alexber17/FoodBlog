@@ -1,11 +1,8 @@
-/*!
- * Start Bootstrap - Blog Home (https://startbootstrap.com/template-overviews/blog-home)
- * Copyright 2013-2019 Start Bootstrap
- * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-blog-home/blob/master/LICENSE)
- */
-body {
-  padding-top: 56px;
- 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body{
+  font-family: 'Playfair Display', serif !important;
 }
-
-
+.btn .btn-primary{
+  color: aqua!important;
+}
