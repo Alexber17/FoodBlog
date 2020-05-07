@@ -1,4 +1,4 @@
-const React = require('react');
+const React = require('../node_modules/react');
 const Default = require('./Default')
 class Edit extends React.Component {
     render() {

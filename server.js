@@ -1,8 +1,8 @@
 // dependencies
-const express = require('express');
+const express = require('./node_modules/express');
 const app = express();
 const mongoose = require('mongoose');
-const methodOverride = require('method-override');
+const methodOverride = require('./node_modules/method-override');
 
 //___________________
 //Port
@@ -30,7 +30,7 @@ mongoose.connection.on('open' , ()=>{});
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'jsx');
-app.engine('jsx', require('express-react-views').createEngine());
+app.engine('jsx', require('./node_modules/express-react-views').createEngine());
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
 
@@ -46,6 +46,6 @@ const RecipeController= require('./controllers/Recipe.js')
 app.use('/FBlog',RecipeController);
 
 // listen
-app.listen(3000, () => {
+app.listen(PORT, () => {
     console.log('listening on: ' + PORT);
 });

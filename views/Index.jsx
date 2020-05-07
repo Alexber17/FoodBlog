@@ -1,6 +1,6 @@
-const React = require('react');
+const React = require('../node_modules/react');
 const Default = require('./Default')
-var moment = require('moment');
+var moment = require('../node_modules/moment/ts3.1-typings/moment');
 
 class Index extends React.Component {
     render() {
