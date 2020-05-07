@@ -14,18 +14,18 @@ class Show extends React.Component {
         return (
             <Default>
           
-            <div class="container">
+            <div className="container">
 
-                <div class="row">
+                <div className="row">
 
                     
-                    <div class="col-lg-8">
+                    <div className="col-lg-8">
 
                             
-                            <h1 class="mt-4">{recipe.name}</h1>
+                            <h1 className="mt-4">{recipe.name}</h1>
 
                             
-                            <p class="lead">
+                            <p className="lead">
                             by
                             <a href="#"> Alexander Bermudez</a>
                             </p>
@@ -38,72 +38,72 @@ class Show extends React.Component {
                             <hr/>
 
                             
-                            <img class="img-fluid rounded" src={recipe.img} alt=""/>
+                            <img className="img-fluid rounded" src={recipe.img} alt=""/>
 
                             <hr/>
 
                             <h4>Ingredients</h4>
-                            <ul class="list-group list-group-flush">
+                            <ul className="list-group list-group-flush">
 
                             {spl.map((ingredients, i)=>{
                                     return  (
                                         
-                                        <li class="list-group-item">{ingredients}</li>
+                                        <li className="list-group-item">{ingredients}</li>
                                     )
                                 })
                             }
                             </ul>
                             
                             <h4>How to Make It</h4>
-                            <p class="lead text-justify">{recipe.directions}</p>
+                            <p className="lead text-justify">{recipe.directions}</p>
 
                             <hr/>
 
                             
-                                <div class="card my-4">
-                                    <h5 class="card-header">Leave a Comment:</h5>
-                                        <div class="card-body">
+                                <div className="card my-4">
+                                    <h5 className="card-header">Leave a Comment:</h5>
+                                        <div className="card-body">
                                             <form>
-                                            <div class="form-group">
-                                                <textarea class="form-control" rows="3"></textarea>
+                                            <div className="form-group">
+                                                <textarea className="form-control" rows="3"></textarea>
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" className="btn btn-primary">Submit</button>
                                             </form>
                                         </div>
                                 </div>
                          </div>
 
-                         <div class="col-md-4">
+                         <div className="col-md-4">
                         
-                            <div class="card my-4">
-                            <h5 class="card-header">Modify menu</h5>
-                            <div class="card-body">
+                            <div className="card my-4">
+                            <h5 className="card-header">Modify menu</h5>
+                            <div className="card-body">
 
-                            <div class="col-lg-6">
-                                <ul class="list-unstyled mb-0">
+                            <div className="col-lg-6">
+                                <ul className="list-unstyled mb-0">
                                 <li>
-                                    <a class="btn btn-link" href={`/FBlog/${recipe._id}/edit`}>Edit</a>
+                                    <a className="btn btn-link" href={`/FBlog/${recipe._id}/edit`}>Edit</a>
                                 </li>
                                 <li>
-                                <a class="btn btn-link" href='' data-toggle="modal" data-target="#myModal">Delete</a>
-                                <div class="modal" id="myModal">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
+                                <a className="btn btn-link" href='' data-toggle="modal" data-target="#myModal">Delete</a>
+                                <div className="modal" id="myModal">
+                                    <div className="modal-dialog">
+                                        <div className="modal-content">
 
-                                        <div class="modal-header">
-                                            <h4 class="modal-title">Modal Heading</h4>
-                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        <div className="modal-header">
+                                            <h4 className="modal-title">Modal Heading</h4>
+                                            <button type="button" className="close" data-dismiss="modal">&times;</button>
                                         </div>
 
-                                        <div class="modal-body">
+                                        <div className="modal-body">
                                         Are you sure to delete?
                                         </div>
 
-                                        <div class="modal-footer">
+                                        <div className="modal-footer">
                                         <form action={`/FBlog/${recipe._id}?_method=DELETE`} method="POST">
-                                            <input  type="submit" value="Yes" class="btn btn-link" ></input  >
+                                            <input  type="submit" value="Yes" className="btn btn-link" ></input  >
                                          </form>
-                                            <button type="button" class="btn btn-danger" data-dismiss="modal">No</button>
+                                            <button type="button" className="btn btn-danger" data-dismiss="modal">No</button>
                                         </div>
 
                                         </div>
