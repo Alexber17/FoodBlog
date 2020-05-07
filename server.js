@@ -30,7 +30,7 @@ mongoose.connection.on('open' , ()=>{});
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
 app.set('view engine', 'jsx');
-app.engine('jsx', require('./node_modules/express-react-views').createEngine());
+app.engine('jsx', require('express-react-views').createEngine());
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
 
@@ -42,8 +42,9 @@ mongoose.connection.once('open', () => {
 
 
 //controllers
-const RecipeController= require('./controllers/Recipe.js')
-app.use('/FBlog',RecipeController);
+
+const recipeController = require('./controllers/recipe.js')
+app.use('/FBlog',recipeController);
 
 // listen
 app.listen(PORT, () => {
