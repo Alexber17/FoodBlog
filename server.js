@@ -1,8 +1,8 @@
 // dependencies
-const express = require('./node_modules/express');
+const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const methodOverride = require('./node_modules/method-override');
+const methodOverride = require('method-override');
 
 //___________________
 //Port
