@@ -34,11 +34,7 @@ app.engine('jsx', require('express-react-views').createEngine());
 app.use(methodOverride('_method'));
 app.use(express.static(__dirname + '/public'));
 
-// mongoose connection
-mongoose.connect('mongodb://localhost:27017/basiccrud', { useNewUrlParser: true, useUnifiedTopology: true });
-mongoose.connection.once('open', () => {
-    console.log("connected to mongo");
-})
+
 
 
 //controllers
